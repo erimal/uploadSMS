@@ -1,0 +1,10 @@
+{% extends 'uploadapp/base.html' %}
+
+{% block content %}
+    <h2>upload<h2>
+
+    {% if url %}
+        <h3> Thanks for uploading file: {{url}} </h3>
+        <h3> SMS will be processed shortly <h2>
+    {% endif %}
+{% endblock %}

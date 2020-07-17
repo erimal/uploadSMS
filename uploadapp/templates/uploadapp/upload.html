@@ -1,0 +1,17 @@
+{% extends 'uploadapp/base.html' %}
+
+{% block content %}
+    <h2>upload<h2>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="document"> <br><br>
+        <button type="submit">Upload file</button>
+    </form>
+
+    {% if url %}
+        <h3> Thanks for uploading file: {{url}} </h3>
+        <h3> SMS will be processed shortly <h2>
+    {% else %}
+            <h3> Please Upload file</h3>
+    {% endif %}
+{% endblock %}

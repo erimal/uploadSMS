@@ -1,0 +1,10 @@
+<h1>SMS Upload</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'read' %}" method="post">
+{% csrf_token %}
+    <label>Your file should have the followings hearders: other_id,phone,text </label>
+    <label>select file</label><br>
+<input type="submit" value="Upload">
+</form>
