@@ -40,7 +40,7 @@ def upload(request):
                             phone = row['phone']
                             msg = row['text']
                             #print(id)
-                            #db.add_sms(row)
+                            db.add_sms(row)
         except:
             print("there is an error ")
 
