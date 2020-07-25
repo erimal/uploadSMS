@@ -1,0 +1,48 @@
+start a new porject in Django
+django-admin startproject myproject
+python manage.py startapp myapp   	 this command wll start an
+
+
+Create a model and run 
+register the app in the settings.py
+python3 manage.py makemigrations my_app	my_app	create the actual DB object scripts
+python manage.py migrate		this will actually create table in the DB
+python manage.py migrate	     	this will also is to create the tables for admin
+python manage.py createsuperuser	Create admin interface
+add to my_app admin.py 		shows a particular interface of my_app insde admin
+
+
+--------------new django application
+create git repository 
+pull it in the desired location 
+Cd to the desired location
+django-admin startproject uploadSMS . # . means force and create the project in the current dir
+python3 manage.py startapp uploadapp
+register the app in the settings.py
+no need for model since the app does not connect to DB
+no need to makemigration
+python3 manage.py migrate
+python3 manage.py createsuperuser	Create admin interface
+add to uploadapp admin.py 		shows a particular interface of my_app insde admin
+admin pass= admin@2020
+to create your first view for upload
+edit view.py to create the index view
+create a file called urls.py under the upload app
+add the reference to the urls there for index to reference the view 
+add to urls.py of the main projects (these are the entry point of the applications)
+path('upload/', include('uploadapp.urls')),
+---design a basic form
+create a folder under uploadapp  templates/upload/index.html
+---model
+create model class Smsimported(models.Model):
+modified settings.py and add the uploadapp
+python3 manage.py makemigrations -- this create the initial model SQL
+python3 manage.py migrate  - this insert in the table 
+
+--- nice reference site 
+https://djangobook.com/mdj2-django-admin/
+
+--change name of app in Admin add in the app.py this command
+verbose_name = "Your Home Page"
+
+
