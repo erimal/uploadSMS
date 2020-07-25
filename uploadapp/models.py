@@ -1,6 +1,7 @@
 from django.db import models
 from datetime import datetime
 from django.utils import timezone
+
 # Create your models here.
 
 class Smsimported(models.Model):
@@ -47,3 +48,13 @@ class Smsdelivered(models.Model):
     class Meta:
         verbose_name = 'SMS Delivered'
         verbose_name_plural = 'SMS Delivered'
+
+# upload document
+class File(models.Model):
+    description = models.CharField(max_length=255)
+    document = models.FileField(upload_to='media/')
+    datecreated = models.DateTimeField('Date Created')
+    user_id = models.IntegerField('User ID')
+
+    def __str__(self):
+        return self.description

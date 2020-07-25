@@ -12,12 +12,10 @@ conn = mysql.connector.connect(
 )
 cursor = conn.cursor()
 
-def add_sms(r):
-    #datecreated = datetime.today().strftime('%Y-%m-%d')
-    datecreated = datetime.today().strftime('%Y-%m-%d, %H:%M:%S')
-    #datecreated = datetime.datetime.now()
-    SQL_i = "insert into uploadapp_smsimported (other_id,	mobilenumber, message,datecreated,sent,attempt,provider) " \
-            f"values('{r['id']}', '{r['phone']}', '{r['text']}', '{datecreated}','0','0', '2')"
+def add_sms(r, user_id):
+    datecreated = datetime.today()
+    SQL_i = "insert into uploadapp_smsimported (other_id,	mobilenumber, message,datecreated,sent,attempt,provider,user_id) " \
+            f"values('{r['id']}', '{r['phone']}', '{r['text']}', '{datecreated}','0','0', '2','{user_id}')"
     print("SQL to insert: " + SQL_i)
     cursor.execute(SQL_i)
     conn.commit()
