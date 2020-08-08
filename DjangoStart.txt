@@ -41,6 +41,7 @@ python3 manage.py migrate  - this insert in the table
 
 --- nice reference site 
 https://djangobook.com/mdj2-django-admin/
+https://djangobook.com/mdj2-django-admin/
 
 --change name of app in Admin add in the app.py this command
 verbose_name = "Your Home Page"
