@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 from uploadapp import views
 
 urlpatterns = [
-    path('upload/', include('uploadapp.urls')),
+    path('', include('uploadapp.urls')),
     path('admin/', admin.site.urls),
 ]
 

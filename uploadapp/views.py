@@ -1,8 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 import csv
 import pandas as pd
 import os
 import uploadapp.dbConfig as db
+import uploadapp.utils as ut
+
+from django.contrib import messages
 
 # Create your views here.
 
@@ -45,3 +48,21 @@ def upload(request):
             print("there is an error ")
 
         return render(request, "uploadapp/upload.html", context)
+
+def sendtest(request):
+    if request.method == 'POST':
+        phone = request.POST.get('phone')
+
+        if len(phone) == 12:
+            print("phone is ok")
+            ## Validation ok send sms
+            messages.success(request, 'A test SMS was sent successfully to number.')
+            ut.send_Orange_SMS(phone)
+            redirect('sendtest')
+        else:
+            messages.warning(request, 'Phone number should be 12 digits.')
+            print("phone is less than 12 digist")
+            redirect('sendtest')
+
+
+    return render(request, "uploadapp/sendtest.html")

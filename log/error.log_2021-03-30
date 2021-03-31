@@ -1,0 +1,95 @@
+Date-Time : 2021-03-30 20:37:39,532 : Internal Server Error: /sendtest/
+Traceback (most recent call last):
+  File "/home/erimal/dev/uploadSMS/uploadapp/utils.py", line 57, in send_Orange_SMS
+    row['mobilenumber'] = phone
+TypeError: list indices must be integers or slices, not str
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/erimal/dev/uploadSMS/uploadapp/views.py", line 60, in sendtest
+    ut.send_Orange_SMS(phone)
+  File "/home/erimal/dev/uploadSMS/uploadapp/utils.py", line 66, in send_Orange_SMS
+    assert type(exception).__name__ == 'NameError'
+AssertionError
+Date-Time : 2021-03-30 20:40:23,863 : /home/erimal/dev/uploadSMS/uploadapp/utils.py changed, reloading.
+Date-Time : 2021-03-30 20:40:41,028 : Internal Server Error: /sendtest/
+Traceback (most recent call last):
+  File "/home/erimal/dev/uploadSMS/uploadapp/utils.py", line 57, in send_Orange_SMS
+    row['mobilenumber'] = phone
+TypeError: list indices must be integers or slices, not str
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/erimal/dev/uploadSMS/uploadapp/views.py", line 60, in sendtest
+    ut.send_Orange_SMS(phone)
+  File "/home/erimal/dev/uploadSMS/uploadapp/utils.py", line 66, in send_Orange_SMS
+    assert type(exception).__name__ == 'NameError'
+AssertionError
+Date-Time : 2021-03-30 20:42:15,866 : /home/erimal/dev/uploadSMS/uploadapp/utils.py changed, reloading.
+Date-Time : 2021-03-30 20:42:22,944 : Internal Server Error: /sendtest/
+Traceback (most recent call last):
+  File "/home/erimal/dev/uploadSMS/uploadapp/utils.py", line 57, in send_Orange_SMS
+    row['mobilenumber'] = phone
+TypeError: list indices must be integers or slices, not str
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/erimal/dev/uploadSMS/uploadapp/views.py", line 60, in sendtest
+    ut.send_Orange_SMS(phone)
+  File "/home/erimal/dev/uploadSMS/uploadapp/utils.py", line 67, in send_Orange_SMS
+    assert exception.__class__.__name__ == 'NameError'
+AssertionError
+Date-Time : 2021-03-30 20:47:11,584 : /home/erimal/dev/uploadSMS/uploadapp/utils.py changed, reloading.
+Date-Time : 2021-03-30 20:47:25,430 : Internal Server Error: /sendtest/
+Traceback (most recent call last):
+  File "/home/erimal/dev/uploadSMS/uploadapp/utils.py", line 57, in send_Orange_SMS
+    row['mobilenumber'] = phone
+TypeError: list indices must be integers or slices, not str
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/erimal/dev/uploadSMS/uploadapp/views.py", line 60, in sendtest
+    ut.send_Orange_SMS(phone)
+  File "/home/erimal/dev/uploadSMS/uploadapp/utils.py", line 71, in send_Orange_SMS
+    assert exception.__class__.__name__ == 'NameError'
+AssertionError
+Date-Time : 2021-03-30 20:48:56,559 : /home/erimal/dev/uploadSMS/uploadapp/utils.py changed, reloading.
+Date-Time : 2021-03-30 20:50:07,788 : /home/erimal/dev/uploadSMS/uploadapp/utils.py changed, reloading.
+Date-Time : 2021-03-30 20:52:06,054 : /home/erimal/dev/uploadSMS/uploadapp/utils.py changed, reloading.
+Date-Time : 2021-03-30 23:32:55,794 : /home/erimal/dev/uploadSMS/uploadapp/utils.py changed, reloading.
+Date-Time : 2021-03-30 23:41:58,675 : Delivery failed: response code:401 - phone:231778231304
+Date-Time : 2021-03-30 23:41:58,912 : Not Found: /favicon.ico
+Date-Time : 2021-03-30 23:42:59,492 : /home/erimal/dev/uploadSMS/uploadapp/utils.py changed, reloading.
+Date-Time : 2021-03-30 23:43:15,086 : Not Found: /favicon.ico
+Date-Time : 2021-03-30 23:53:33,549 : /home/erimal/dev/uploadSMS/uploadapp/utils.py changed, reloading.
+Date-Time : 2021-03-30 23:55:41,036 : /home/erimal/dev/uploadSMS/uploadapp/dbConfig.py changed, reloading.
+Date-Time : 2021-03-30 23:57:00,590 : /home/erimal/dev/uploadSMS/uploadapp/dbConfig.py changed, reloading.
+Date-Time : 2021-03-31 00:00:03,696 : /home/erimal/dev/uploadSMS/uploadapp/utils.py changed, reloading.

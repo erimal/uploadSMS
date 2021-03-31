@@ -6,4 +6,5 @@
 # DB_PASSWORD = 'Turniphair!30'
 #
 # # Log file
-# LOG_FILENAME = 'log/error.log'
+# Log file
+LOG_FILENAME = 'log/error.log'

@@ -1,0 +1,14 @@
+{% extends 'uploadapp/base.html' %}
+
+{% block content %}
+    <h2>Send SMS<h2>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="id_phone" class="form-label">Phone number</label>
+            <input type="text" name="phone" id="id_phone" placeholder="eg:231778231304"> <br><br>
+            <button type="submit">Send Test SMS</button>
+        </div>
+    </form>
+
+{% endblock %}
