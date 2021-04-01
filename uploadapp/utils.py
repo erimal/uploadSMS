@@ -6,6 +6,7 @@ from datetime import datetime
 from random import randint
 
 from uploadapp.dbConfig import add_sms ,deliver_message
+from django_test_curl import CurlClient
 
 
 def send_Orange_SMS(phone):
@@ -42,8 +43,11 @@ def send_Orange_SMS(phone):
         json_data_final = json.dumps(data_final)
 
         #print(json_data_final)
+        token = "Bearer " + get_orange_token()
+
+        #"Authorization": "Bearer bsOZFsuiPsL7dk1f2VAY9OR5vB3z",
         header = {
-                   "Authorization": "Bearer bsOZFsuiPsL7dk1f2VAY9OR5vB3z",
+                   "Authorization": f"{token}",
                     "Content-Type": "application/json"
                  }
 
@@ -86,3 +90,25 @@ def random_with_N_digits(n):
     range_start = 10**(n-1)
     range_end = (10**n)-1
     return randint(range_start, range_end)
+
+def get_orange_token():
+
+    token = ""
+    url = "https://api.orange.com/oauth/v3/token"
+    data = {}
+    data['grant_type'] = "client_credentials"
+
+    header = {
+        "Authorization": "Basic TGxKQVN0QklEdlhkM0J2eEVPRklrMXNjaWJvRmRHMkY6Z3hNQTNWUVpXV3N1a1hBWg==",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Accept": "application/json"
+    }
+
+    response = requests.post(url, data, headers=header)
+    print("Reposnse of the Json", response.text)
+    if response.status_code == 200:
+        resp_text = json.loads(response.text)
+        token = resp_text['access_token']
+        print("Orange_token", token)
+
+    return token

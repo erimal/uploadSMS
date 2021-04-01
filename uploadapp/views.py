@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 import csv
 import pandas as pd
@@ -9,7 +10,7 @@ from django.contrib import messages
 
 # Create your views here.
 
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.core.files.storage import FileSystemStorage
 
 
@@ -49,20 +50,26 @@ def upload(request):
 
         return render(request, "uploadapp/upload.html", context)
 
+@login_required
 def sendtest(request):
+
     if request.method == 'POST':
         phone = request.POST.get('phone')
 
         if len(phone) == 12:
             print("phone is ok")
             ## Validation ok send sms
-            messages.success(request, 'A test SMS was sent successfully to number.')
+            #messages.success(request, 'A test SMS was sent successfully to number.')
+            resp = "A test SMS was sent successfully to number."
+            #ut.get_orange_token()
             ut.send_Orange_SMS(phone)
             redirect('sendtest')
         else:
-            messages.warning(request, 'Phone number should be 12 digits.')
+            #messages.warning(request, 'Phone number should be 12 digits.')
+            resp = "Phone number should be 12 digits."
             print("phone is less than 12 digist")
             redirect('sendtest')
 
+        #return JsonResponse(resp, safe=False)
 
     return render(request, "uploadapp/sendtest.html")
