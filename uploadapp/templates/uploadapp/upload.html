@@ -1,17 +1,25 @@
 {% extends 'uploadapp/base.html' %}
 
 {% block content %}
-    <h2>upload<h2>
-    <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        <input type="file" name="document"> <br><br>
-        <button type="submit">Upload file</button>
-    </form>
-
-    {% if url %}
-        <h3> Thanks for uploading file: {{url}} </h3>
-        <h3> SMS will be processed shortly <h2>
-    {% else %}
-            <h3> Please Upload file</h3>
-    {% endif %}
+    <br><br><br>
+    <div class="row justify-content-center">
+        <div class="col-lg-5">
+            <h2>upload</h2>
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input type="file" name="document"> <br><br>
+<!--                <button type="submit">Upload file</button>-->
+<!--                <div class="d-grid gap-2 col-6 mx-auto">-->
+                    <button type="submit" class="btn btn-secondary btn-lg">Upload file</button>
+<!--                </div>-->
+            </form>
+            <br><br>
+            {% if url %}
+                <h4> Thanks for uploading file: {{url}} </h4>
+                <h4> SMS will be processed shortly </h4>
+            {% else %}
+                    <h4> Please Upload file</h4>
+            {% endif %}
+        </div>
+    </div>
 {% endblock %}

@@ -3,8 +3,10 @@ from django.shortcuts import render, redirect
 import csv
 import pandas as pd
 import os
-import uploadapp.dbConfig as db
-import uploadapp.utils as ut
+from .dbConfig import dbSMS as db
+from .utils import Orange as ut
+#import uploadSMS.uploadapp.dbConfig as db
+#import uploadSMS.uploadapp.utils as ut
 
 from django.contrib import messages
 
@@ -13,13 +15,15 @@ from django.contrib import messages
 from django.http import HttpResponse, JsonResponse
 from django.core.files.storage import FileSystemStorage
 
-
+@login_required
 def upload(request):
         context = {}
 
         try:
 
             if request.method == 'POST' and request.FILES['document']:
+                user = request.POST.get('id')
+                current_user = request.user.id
                 uploaded_file = request.FILES['document']
                 name = ''
                 print(uploaded_file.name)
@@ -44,9 +48,9 @@ def upload(request):
                             phone = row['phone']
                             msg = row['text']
                             #print(id)
-                            db.add_sms(row)
-        except:
-            print("there is an error ")
+                            db.add_sms(row, current_user)
+        except Exception as e:
+            print(e)
 
         return render(request, "uploadapp/upload.html", context)
 
@@ -55,6 +59,7 @@ def sendtest(request):
 
     if request.method == 'POST':
         phone = request.POST.get('phone')
+        current_user = request.user.id
 
         if len(phone) == 12:
             print("phone is ok")
@@ -62,7 +67,7 @@ def sendtest(request):
             #messages.success(request, 'A test SMS was sent successfully to number.')
             resp = "A test SMS was sent successfully to number."
             #ut.get_orange_token()
-            ut.send_Orange_SMS(phone)
+            ut.send_SMS(phone, current_user)
             redirect('sendtest')
         else:
             #messages.warning(request, 'Phone number should be 12 digits.')

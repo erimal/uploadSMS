@@ -1,0 +1,126 @@
+Date-Time : 2021-04-07 15:42:43,038 : Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 391, in login
+    **self.each_context(request),
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 310, in each_context
+    'available_apps': self.get_app_list(request),
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 482, in get_app_list
+    app_dict = self._build_app_dict(request)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 427, in _build_app_dict
+    has_module_perms = model_admin.has_module_permission(request)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/contrib/admin/options.py", line 539, in has_module_permission
+    return request.user.has_module_perms(self.opts.app_label)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/contrib/auth/models.py", line 313, in has_module_perms
+    return _user_has_module_perms(self, app_label)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/contrib/auth/models.py", line 220, in _user_has_module_perms
+    if backend.has_module_perms(user, app_label):
+  File "/home/erimal/.local/lib/python3.8/site-packages/django_auth_ldap/backend.py", line 175, in has_module_perms
+    for perm in self.get_all_permissions(user):
+  File "/home/erimal/.local/lib/python3.8/site-packages/django_auth_ldap/backend.py", line 182, in get_all_permissions
+    return self.get_group_permissions(user, obj)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django_auth_ldap/backend.py", line 189, in get_group_permissions
+    permissions = user.ldap_user.get_group_permissions()
+  File "/home/erimal/.local/lib/python3.8/site-packages/django_auth_ldap/backend.py", line 390, in get_group_permissions
+    self._load_group_permissions()
+  File "/home/erimal/.local/lib/python3.8/site-packages/django_auth_ldap/backend.py", line 798, in _load_group_permissions
+    group_names = self._get_groups().get_group_names()
+  File "/home/erimal/.local/lib/python3.8/site-packages/django_auth_ldap/backend.py", line 812, in _get_groups
+    self._groups = _LDAPUserGroups(self)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django_auth_ldap/backend.py", line 885, in __init__
+    self._init_group_settings()
+  File "/home/erimal/.local/lib/python3.8/site-packages/django_auth_ldap/backend.py", line 896, in _init_group_settings
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: AUTH_LDAP_GROUP_TYPE must be an LDAPGroupType instance.
+Date-Time : 2021-04-07 15:44:05,222 : Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 391, in login
+    **self.each_context(request),
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 310, in each_context
+    'available_apps': self.get_app_list(request),
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 482, in get_app_list
+    app_dict = self._build_app_dict(request)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 427, in _build_app_dict
+    has_module_perms = model_admin.has_module_permission(request)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/contrib/admin/options.py", line 539, in has_module_permission
+    return request.user.has_module_perms(self.opts.app_label)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/contrib/auth/models.py", line 313, in has_module_perms
+    return _user_has_module_perms(self, app_label)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/contrib/auth/models.py", line 220, in _user_has_module_perms
+    if backend.has_module_perms(user, app_label):
+  File "/home/erimal/.local/lib/python3.8/site-packages/django_auth_ldap/backend.py", line 175, in has_module_perms
+    for perm in self.get_all_permissions(user):
+  File "/home/erimal/.local/lib/python3.8/site-packages/django_auth_ldap/backend.py", line 182, in get_all_permissions
+    return self.get_group_permissions(user, obj)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django_auth_ldap/backend.py", line 189, in get_group_permissions
+    permissions = user.ldap_user.get_group_permissions()
+  File "/home/erimal/.local/lib/python3.8/site-packages/django_auth_ldap/backend.py", line 390, in get_group_permissions
+    self._load_group_permissions()
+  File "/home/erimal/.local/lib/python3.8/site-packages/django_auth_ldap/backend.py", line 798, in _load_group_permissions
+    group_names = self._get_groups().get_group_names()
+  File "/home/erimal/.local/lib/python3.8/site-packages/django_auth_ldap/backend.py", line 812, in _get_groups
+    self._groups = _LDAPUserGroups(self)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django_auth_ldap/backend.py", line 885, in __init__
+    self._init_group_settings()
+  File "/home/erimal/.local/lib/python3.8/site-packages/django_auth_ldap/backend.py", line 896, in _init_group_settings
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: AUTH_LDAP_GROUP_TYPE must be an LDAPGroupType instance.
+Date-Time : 2021-04-07 16:26:51,972 : Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 391, in login
+    **self.each_context(request),
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 310, in each_context
+    'available_apps': self.get_app_list(request),
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 482, in get_app_list
+    app_dict = self._build_app_dict(request)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 427, in _build_app_dict
+    has_module_perms = model_admin.has_module_permission(request)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/contrib/admin/options.py", line 539, in has_module_permission
+    return request.user.has_module_perms(self.opts.app_label)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/contrib/auth/models.py", line 313, in has_module_perms
+    return _user_has_module_perms(self, app_label)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django/contrib/auth/models.py", line 220, in _user_has_module_perms
+    if backend.has_module_perms(user, app_label):
+  File "/home/erimal/.local/lib/python3.8/site-packages/django_auth_ldap/backend.py", line 175, in has_module_perms
+    for perm in self.get_all_permissions(user):
+  File "/home/erimal/.local/lib/python3.8/site-packages/django_auth_ldap/backend.py", line 182, in get_all_permissions
+    return self.get_group_permissions(user, obj)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django_auth_ldap/backend.py", line 189, in get_group_permissions
+    permissions = user.ldap_user.get_group_permissions()
+  File "/home/erimal/.local/lib/python3.8/site-packages/django_auth_ldap/backend.py", line 390, in get_group_permissions
+    self._load_group_permissions()
+  File "/home/erimal/.local/lib/python3.8/site-packages/django_auth_ldap/backend.py", line 798, in _load_group_permissions
+    group_names = self._get_groups().get_group_names()
+  File "/home/erimal/.local/lib/python3.8/site-packages/django_auth_ldap/backend.py", line 812, in _get_groups
+    self._groups = _LDAPUserGroups(self)
+  File "/home/erimal/.local/lib/python3.8/site-packages/django_auth_ldap/backend.py", line 885, in __init__
+    self._init_group_settings()
+  File "/home/erimal/.local/lib/python3.8/site-packages/django_auth_ldap/backend.py", line 896, in _init_group_settings
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: AUTH_LDAP_GROUP_TYPE must be an LDAPGroupType instance.
+Date-Time : 2021-04-07 16:27:14,166 : Not Found: /logout/{% static 'js/chart-area-demo.js' %)
+Date-Time : 2021-04-07 16:27:14,404 : Not Found: /logout/{% static 'js/chart-area-demo.js' %)
+Date-Time : 2021-04-07 16:42:22,542 : /home/erimal/dev/uploadSMS/uploadSMS/settings.py changed, reloading.
