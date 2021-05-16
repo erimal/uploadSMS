@@ -137,7 +137,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'smsdev',
         'USER': 'erimal',
-        'PASSWORD': 'Turniphair!30',
+        'PASSWORD': 'xxxxx',
         'HOST': 'localhost',
         'PORT': '3306',
     }
