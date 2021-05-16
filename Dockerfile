@@ -15,6 +15,8 @@ WORKDIR /usr/src/app
 # Copy the requirememt to the app folder 
 COPY requirements.txt ./requirements.txt
 
+RUN apt-get update && apt-get install -y  libldap2-dev libsasl2-dev ldap-utils
+
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . /usr/src/app

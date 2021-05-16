@@ -21,7 +21,7 @@ from django_auth_ldap.config import LDAPSearch, GroupOfNamesType ,ActiveDirector
 # Baseline configuration.
 AUTH_LDAP_SERVER_URI = "ldap://S-ABL-PDCDC1.accessbank.com.lr"
 AUTH_LDAP_BIND_DN = "CN=Odoo,OU=IT,OU=ABLusers,DC=ACCESSBANK,DC=COM,DC=LR"
-AUTH_LDAP_BIND_PASSWORD = "!23456AbL"
+AUTH_LDAP_BIND_PASSWORD = "xxxx"
 AUTH_LDAP_USER_SEARCH = LDAPSearch(
     "OU=ABLusers,DC=ACCESSBANK,DC=COM,DC=LR", ldap.SCOPE_SUBTREE, "sAMAccountName=%(user)s"
 )
